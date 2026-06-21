@@ -1,3 +1,12 @@
+import random
+
+number_to_guess = random.randint(1, 100)
+
+while True:
+    user_guess = int(input("Guess the number (betweeen 1 and 100): "))
+
+
+
 # Generate a random single number between 1 and 100
 # 
 # guess_counter = 0
