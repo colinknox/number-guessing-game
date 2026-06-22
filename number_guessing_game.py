@@ -1,5 +1,7 @@
 import random
 
+print("Welcome to my Number Guessing Game!")
+
 while True:
     minimum_value = int(input("Choose a minimum value: "))
     maximum_value = int(input("Choose a maximum value: "))
@@ -8,11 +10,19 @@ while True:
     else:
         break
 
+print("You get 5 attempts before it's GAME OVER. Good luck!")
+
 number_to_guess = random.randint(minimum_value, maximum_value)
 guess_attempts = 0
+max_attempts = 5
 
 while True:
+    if guess_attempts == max_attempts:
+        print(f"Game Over! The correct number was {number_to_guess}. Better luck next time!")
+        break
+    
     user_guess = int(input(f"Guess the number (between {minimum_value} and {maximum_value}): "))
+    
     if user_guess > number_to_guess:
         guess_attempts += 1
         print("Too high!")
