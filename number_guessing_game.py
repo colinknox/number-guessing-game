@@ -39,11 +39,15 @@ while True:
                 print(f"Congratulations! You guessed the number in {guess_attempts} attempt.")
             else:
                 print(f"Congratulations! You guessed the number in {guess_attempts} attempts.")
+            print(f"HIGH SCORE BEFORE = {high_score}")
+
+            # high_score = guess_attempts
+            high_score = guess_attempts
+            if guess_attempts < high_score:
+                high_score = guess_attempts
+            else:
+                pass
+
+            print(f"HIGH SCORE AFTER = {high_score}")
             break
     
-    print(f"HIGH SCORE BEFORE = {high_score}")
-    if guess_attempts < high_score:
-        high_score = guess_attempts
-    else:
-        pass
-    print(f"HIGH SCORE AFTER = {high_score}")
