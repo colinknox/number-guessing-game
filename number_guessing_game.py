@@ -1,7 +1,6 @@
 import random
 
-high_score = 0
-
+high_score = None
 
 while True:
     print("Welcome to my Number Guessing Game!")
@@ -39,15 +38,17 @@ while True:
                 print(f"Congratulations! You guessed the number in {guess_attempts} attempt.")
             else:
                 print(f"Congratulations! You guessed the number in {guess_attempts} attempts.")
-            print(f"HIGH SCORE BEFORE = {high_score}")
-
-            # high_score = guess_attempts
-            high_score = guess_attempts
-            if guess_attempts < high_score:
+            
+            if high_score == None:
+                high_score = guess_attempts
+            elif guess_attempts < high_score:
                 high_score = guess_attempts
             else:
                 pass
-
-            print(f"HIGH SCORE AFTER = {high_score}")
+            
+            if high_score == 1:
+                print(f"\nYour high score is currently {high_score} attempt.\n")
+            else:
+                print(f"\nYour high score is currently {high_score} attempts.\n")
             break
     
